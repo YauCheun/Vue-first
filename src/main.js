@@ -18,19 +18,21 @@ Vue.use(VueRouter)
 
 
 // 导入格式化时间插件
-
+import moment from 'moment' 
 //  定义全局的过滤器
-
+Vue.filter('dateformat',function(dataStr,pattern='YYYY-MM-DD HH:mm:ss'){
+  return moment(dataStr).format(pattern)
+})
 
 
 //2.1 导入vue-resource
-
+import VueResource from 'vue-resource'
 //2.2 安装 vue-resource
-
+Vue.use(VueResource)
 //  设置请求的根路径
-
+Vue.http.options.root = 'http://www.liulongbin.top:3005'
 // 全局设置 post 时候表单数据为json格式
-
+Vue.http.options.emulateJSON = true
 
 // 按需导入mint-ui中的组件
 // import { Header,Swipe,SwipeItem ,Button ,Lazyload} from 'mint-ui'
@@ -44,7 +46,8 @@ import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
 
 //  安装图片预览插件
-
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
 
 
 // 导入MUI的样式
