@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 轮播图区域 -->
-    <swiper :lunbotu="lunbotuList"></swiper>
+    <swiper :lunbotu="lunbotuList" :isfull="true"></swiper>
 
     <!-- 图标列表区域 -->
     <ul class="mui-table-view mui-grid-view mui-grid-9">
@@ -18,10 +18,10 @@
         </routerLink>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <routerLink to="/home/goodslist">
           <img src="../../images/menu3.png" alt />
           <div class="mui-media-body">商品购买</div>
-        </a>
+        </routerLink>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">

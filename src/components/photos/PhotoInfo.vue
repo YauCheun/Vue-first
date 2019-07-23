@@ -25,7 +25,7 @@ export default {
     return {
       photoinfo: {},
       list:[],
-      id:this.$route.params.id
+      id: this.$route.params.id
     };
   },
   created() {
